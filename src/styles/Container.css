@@ -11,10 +11,17 @@
 }
 
 .input-search{
-    margin: 10px;
     border: none;
-    width: 300px;
+    color:#122044;
+    font-size: 17px;
     height: 20px;
+    margin: 10px;
+    width: 300px;
+    padding: 5px;
+}
+
+.input-search:focus{
+    outline: none;
 }
 
 .btn-search {
