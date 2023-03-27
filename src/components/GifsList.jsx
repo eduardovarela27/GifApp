@@ -1,13 +1,22 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FetchGifs } from '../Api/FetchGifs'
+import { GifItem } from './GifItem';
 
-export const GifsList = ({category}) => {
-  console.log(category);
+export const GifsList = ({ category }) => {
+  const [gifs, setGifs] = useState([]);
+
   useEffect(() => {
-    FetchGifs(category);
-  });
-  
+    FetchGifs(category).then(data => setGifs(data));
+  }, []);
+
   return (
-    <div>GifsList</div>
+    <>
+      <h2>{category}</h2>
+      <div className='card-grid'>
+        {gifs.map(gif => (
+          <GifItem key={gif.id} gif={gif.url} />
+        ))}
+      </div>
+    </>
   )
 }
