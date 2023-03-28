@@ -6,7 +6,8 @@ export const useForm = (inputvalue,setInputValue,categories,categoryToAdd) => {
 
     const handleOnKey = (e) => {
         if (e.key === "Enter") {
-            if (categories.includes(inputvalue) || inputvalue.length <= 2) return
+            //validates if the category is  already in the array and if value has more than 2 characters
+            if (categories.includes(inputvalue) || inputvalue.trim().length <= 2) return
             categoryToAdd([inputvalue.toUpperCase(), ...categories]);
             setInputValue('');
         }
