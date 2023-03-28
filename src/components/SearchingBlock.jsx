@@ -1,25 +1,10 @@
 import React, { useState } from 'react';
+import { useForm } from '../hooks/useForm';
 import '../styles/Container.css';
 
 export const SearchingBlock = ({ categoryToAdd, categories }) => {
   const [inputvalue, setInputValue] = useState('');
-
-  function handleOnKey(e) {
-    if (e.key === "Enter") {
-      if (categories.includes(inputvalue) || inputvalue.length <= 2) return
-      categoryToAdd([inputvalue.toUpperCase(), ...categories]);
-      setInputValue('');
-    }
-  }
-
-  function handleOnChange({ target }) {
-    setInputValue(target.value);
-  }
-
-  function handleOnclick(e) {
-    e.key = "Enter";
-    handleOnKey(e);
-  }
+  const {handleOnChange,handleOnKey,handleOnclick} = useForm(inputvalue,setInputValue,categories,categoryToAdd);
 
   return (
     <div className="searching-block">
