@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/Container.css';
-import { SearchingBlock } from './SearchingBlock';
-import { GifsList } from '../components/GifsList';
+import { SearchingBlock, GifsList } from './';
 
 
 export const Container = () => {

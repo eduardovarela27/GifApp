@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Container } from './components/Container';
+import { Container } from './components/';
 import  './index.css';
 
 
