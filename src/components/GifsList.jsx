@@ -12,7 +12,6 @@ export const GifsList = ({ category }) => {
   return (
     <>
       <h2>{category}</h2>
-      <hr />
       <div className="card-grid">
         {gifs.map(gif => (
           <GifItem key={gif.id} {...gif} />
