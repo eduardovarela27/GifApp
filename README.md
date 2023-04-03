@@ -3,7 +3,7 @@ Practice's application made with cra, using gif api.
 ## Dependencies
 1. NodeJs
 
-## Guide Instalation
+## Guide Installation
 ```git 
 git clone https://github.com/eduardovarela27/GifApp
 ``` 
